@@ -17,6 +17,8 @@ outside a mind that sets the mind's parameters.
 
 Full framework, spec and conformance vectors: [cYoren/exoself](https://github.com/cYoren/exoself).
 
+Demo, 47 seconds: [exoself-demo.mp4](https://github.com/cYoren/hermes-exoself/releases/download/v0.1.0/exoself-demo.mp4).
+
 ## What it does in Hermes
 
 - **A system prompt section.** The drawn temperament is rendered and frozen into
