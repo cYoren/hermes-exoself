@@ -1,0 +1,35 @@
+name: exoself
+version: 0.1.0
+manifest_version: 2
+license: MIT
+author: Gustavo Marcelino
+homepage: https://github.com/cYoren/hermes-exoself
+description: >-
+  A drawn temperament for the agent. One 32 byte seed, drawn once by the
+  operator, expanded deterministically into a temperament block that is frozen
+  into each new session's system prompt. Growth comes only from turns actually
+  lived, and nothing in the plugin can draw a second seed.
+tags: [identity, personality, determinism, exoself]
+requires_hermes: ">=0.23.0"
+python_dependencies:
+  - "exoself>=0.3.0,<0.4"
+provides_tools:
+  - exoself_status
+  - exoself_verify
+  - exoself_temperament
+  - exoself_record_session
+provides_hooks:
+  - on_session_end
+config_schema:
+  desire:
+    type: bool
+    default: false
+    description: "Express appetites in the prompt. Off by default, per the framework."
+  auto_record:
+    type: bool
+    default: true
+    description: "Record one development event per completed turn, with no conversation content."
+  max_events_per_session:
+    type: int
+    default: 20
+    description: "Upper bound on automatic development events recorded in one session."
